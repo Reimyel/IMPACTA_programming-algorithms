@@ -1,0 +1,5 @@
+print("hello world")
+print("este é um arquivo de exemplo em python")
+print("vamos aprender a programar em python")
+print("divirta-se codificando!")
+print("até a próxima!")
