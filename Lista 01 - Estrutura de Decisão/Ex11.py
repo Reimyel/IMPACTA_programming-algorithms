@@ -14,3 +14,34 @@ Após o aumento ser realizado, informe na tela:
 '''
 
 salarioAtual = float(input("Informe seu salário: "))
+percentualAumento = ""
+valorAumento = ""
+salarioReajuste = ""
+
+if salarioAtual <= 280:
+    percentualAumento = 20
+    valorAumento = percentualAumento / 100 * salarioAtual
+    salarioReajuste = salarioAtual + valorAumento
+
+elif salarioAtual > 280 and salarioAtual <= 700:
+    percentualAumento = 15
+    valorAumento = percentualAumento / 100 * salarioAtual
+    salarioReajuste = salarioAtual + valorAumento
+
+elif salarioAtual > 700 and salarioAtual <= 1500:
+    percentualAumento = 10
+    valorAumento = percentualAumento / 100 * salarioAtual
+    salarioReajuste = salarioAtual + valorAumento
+
+elif salarioAtual > 1500:
+    percentualAumento = 5
+    valorAumento = percentualAumento / 100 * salarioAtual
+    salarioReajuste = salarioAtual + valorAumento
+    
+else:
+    print("Erro inesperado...")
+
+print("Seu salário atual é igual a: R$ " + str(salarioAtual))
+print("O porcentual de aumento que será aplicado é de: " + str(percentualAumento))
+print("O aumento do seu salário será de: " + str(valorAumento))
+print("Seu salário após os reajustes será igual a: R$ " + str(salarioReajuste))
