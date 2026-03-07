@@ -40,7 +40,7 @@ if salarioBruto <= 900:
 else:
     print("Erro inesperado...")
 
-print("Seu salário atual é igual a: R$ " + str(salarioAtual))
-print("O porcentual de aumento que será aplicado é de: " + str(percentualAumento))
-print("O aumento do seu salário será de: " + str(valorAumento))
-print("Seu salário após os reajustes será igual a: R$ " + str(salarioReajuste))
+print("Seu salário atual é igual a: R$ " + str())
+print("O porcentual de aumento que será aplicado é de: " + str())
+print("O aumento do seu salário será de: " + str())
+print("Seu salário após os reajustes será igual a: R$ " + str())
