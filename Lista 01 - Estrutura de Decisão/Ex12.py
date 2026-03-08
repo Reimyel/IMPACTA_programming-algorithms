@@ -21,26 +21,29 @@ quantidade de hora é 220.
 '''
 
 valorHora = float(input("Informe o valor da sua hora: "))
-quantidadeHoras = float(input("Informe quantas horas você trabalha: "))
-salarioBruto = ""
-descontoIR = ""
-descontoINSS = 10 / 100 * salarioBruto
-valorFGTS = 11 / 100 * salarioBruto
-totalDescontos = salarioBruto - descontoIR - descontoINSS
-salarioLiquido = ""
-
+quantidadeHoras = float(input("Informe quantas horas você trabalha por mês: "))
+salarioBruto = valorHora * quantidadeHoras
 if salarioBruto <= 900:
-    print(salarioBruto)
-    print(descontoIR)
-    print(descontoINSS)
-    print(valorFGTS)
-    print(totalDescontos)
-    print(salarioLiquido)
-
+    valorIR = 0
+elif salarioBruto <= 1500:
+    valorIR = 5
+elif salarioBruto <= 2500:
+    valorIR = 10
+elif salarioBruto > 2500:
+    valorIR = 20
 else:
     print("Erro inesperado...")
+    exit
 
-print("Seu salário atual é igual a: R$ " + str())
-print("O porcentual de aumento que será aplicado é de: " + str())
-print("O aumento do seu salário será de: " + str())
-print("Seu salário após os reajustes será igual a: R$ " + str())
+descontoIR = valorIR / 100 * salarioBruto
+descontoINSS = 10 / 100 * salarioBruto
+valorFGTS = 11 / 100 * salarioBruto
+totalDescontos = descontoIR + descontoINSS
+salarioLiquido = salarioBruto - descontoIR - descontoINSS
+
+print("\nSalário Bruto: (5 * 220) : R$ " + str(salarioBruto))
+print("(-) IR (5%) : R$ " + str(descontoIR))
+print("(-) INSS ( 10%) : R$ " + str(descontoINSS))
+print("FGTS (11%) : R$ " + str(valorFGTS))
+print("Total de descontos : R$ " + str(totalDescontos))
+print("Salário Liquido : R$ " + str(salarioLiquido))
