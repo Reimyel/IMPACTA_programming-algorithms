@@ -11,6 +11,7 @@ informe-a ao usuário;
 • Se o delta for positivo, a equação possui duas raízes reais; informe-as ao
 usuário;
 '''
+import math
 
 a = float(input("Informe o valor de 'a': "))
 if a == 0:
@@ -19,9 +20,10 @@ if a == 0:
 
 b = float(input("Informe o valor de 'b': "))
 c = float(input("Informe o valor de 'c': "))
-delta = b ** - (4 * a * c) #algo de errado nessa equação...
-x1 = (-b + delta) / 2 * a
-x2 = (-b - delta) / 2 * a
+delta = (b ** 2) - (4 * a * c) #algo de errado nessa equação...
+divisor = 2 * a
+x1 = (-b + math.sqrt(delta)) / divisor
+x2 = (-b - math.sqrt(delta)) / divisor
 
 print("O valor do delta é: " + str(delta))
 if delta < 0:
