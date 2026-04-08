@@ -15,4 +15,7 @@ elif 10 <= numero <= 19:
 else:
     d = numero // 10
     u = numero % 10
-    print(dezenas[d] + " e " + unidades[u])
+    if u == 0:
+        print(dezenas[d])
+    else:
+        print(dezenas[d] + " e " + unidades[u])
