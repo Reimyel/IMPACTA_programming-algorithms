@@ -5,4 +5,6 @@ def calcular_media(notas):
 notasInput = input("Digite suas notas separadas por espaços: ")
 listaNotas = notasInput.split()
 
-print(calcular_media(listaNotas))
+listaNotas = [float(nota) for nota in listaNotas]
+
+print(f"Sua nota final é {calcular_media(listaNotas):.2f}")
